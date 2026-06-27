@@ -1,0 +1,248 @@
+:root {
+  --bg: #08090d;
+  --card: #151925;
+  --line: rgba(242, 193, 78, 0.22);
+  --line-soft: rgba(255, 255, 255, 0.08);
+  --gold: #f2c14e;
+  --text: #f7f2e9;
+  --muted: #c9c2b4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(242, 193, 78, 0.11), transparent 34%),
+    linear-gradient(180deg, #07080d 0%, #0b0d14 100%);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+#app {
+  min-height: 100vh;
+  padding: 22px 14px 40px;
+}
+
+.app-shell {
+  width: min(100%, 720px);
+  margin: 0 auto;
+}
+
+.loading, .error, .empty {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(18, 20, 29, 0.86);
+  color: var(--muted);
+  line-height: 1.7;
+  text-align: center;
+}
+
+.entrance-head {
+  overflow: hidden;
+  text-align: center;
+  padding: 30px 20px 26px;
+  border: 1px solid rgba(242, 193, 78, 0.22);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top center, rgba(30, 76, 142, 0.30), transparent 42%),
+    radial-gradient(circle at bottom left, rgba(242, 193, 78, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(16, 26, 45, 0.98), rgba(8, 13, 24, 0.98));
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.34);
+}
+
+.entrance-date {
+  color: #ece6d7;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.entrance-kicker {
+  margin-top: 12px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.entrance-title {
+  margin: 12px 0 0;
+  color: var(--text);
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.entrance-topic {
+  margin-top: 14px;
+  color: var(--gold);
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.entrance-summary {
+  max-width: 520px;
+  margin: 14px auto 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.card {
+  margin-top: 18px;
+  padding: 20px 18px;
+  border: 1px solid var(--line-soft);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(18,20,29,0.92));
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+.card.foundation {
+  border-color: rgba(242, 193, 78, 0.20);
+  background: linear-gradient(180deg, rgba(242,193,78,0.08), rgba(18,20,29,0.92));
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.icon { font-size: 22px; }
+
+.bible-ref {
+  margin-top: 11px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.summary {
+  margin-top: 12px;
+  color: var(--text);
+  line-height: 1.72;
+  font-size: 16px;
+}
+
+.korean-verse {
+  margin-top: 14px;
+  padding: 14px 14px 14px 16px;
+  border-left: 3px solid rgba(242, 193, 78, 0.58);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+details { margin-top: 12px; }
+
+summary {
+  color: var(--gold);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.verse {
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0 14px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.section-title::before {
+  content: '';
+  width: 4px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--gold);
+  flex: 0 0 auto;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(242, 193, 78, 0.28), rgba(255,255,255,0.02));
+}
+
+.prayer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.prayer-item {
+  padding: 18px 16px;
+  border: 1px solid var(--line-soft);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(18,20,29,0.90));
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+.item-category {
+  display: inline-flex;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(242, 193, 78, 0.10);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.item-title {
+  margin-top: 12px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.item-text {
+  margin-top: 10px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.footer-note {
+  margin: 28px 0 10px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(242, 193, 78, 0.12);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+@media (max-width: 420px) {
+  .entrance-head { padding: 25px 16px 22px; }
+  .entrance-title { font-size: 34px; }
+  .entrance-topic { font-size: 18px; }
+  .entrance-summary { font-size: 13px; }
+}
